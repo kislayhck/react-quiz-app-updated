@@ -1,0 +1,20 @@
+.getMyPlanTitle {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 65px;
+}
+.getMyPlanDescription {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  font-size: 15px;
+  padding-top: 20px;
+}
+.planNow {
+  color: #6c5dd3;
+  font-weight: 600;
+  margin-left: 5px;
+}

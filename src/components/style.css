@@ -1,0 +1,186 @@
+.options {
+  margin: 10px;
+}
+.question-text {
+  padding: 13px;
+}
+.options {
+  border-radius: 20px;
+  background-color: #f4828b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 17px;
+}
+
+.options span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.options span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.options:hover span {
+  padding-right: 25px;
+}
+
+.options:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.score-section {
+  text-align: center;
+  padding: 30px;
+  background: #f4511e;
+}
+.register {
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+.questionRightBar {
+  margin-top: -24px;
+  background-color: #6c5dd3;
+  padding: 29px;
+  color: #ffffff;
+}
+.imgAnswer {
+  width: 40px;
+  display: -webkit-inline-box;
+  padding: -14px;
+  margin-right: 16px;
+}
+.Img-card {
+  display: flex;
+  align-items: center;
+  border: 10px solid #ffffff;
+  margin-left: 19%;
+  width: 36%;
+  justify-content: center;
+  background-color: #ffff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+/* Subscription */
+.wrapper {
+  position: relative;
+  perspective: 40em;
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.card1 {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: rgba(249, 198, 26, 0.88);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card1 .enclosed {
+  background: #000;
+  line-height: 1;
+  color: rgba(249, 198, 26, 1);
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  transform-origin: right center;
+}
+
+.wrapper:before {
+  --bw: 9px;
+  grid-area: 1 / 1;
+  content: "";
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid #000;
+  box-sizing: content-box;
+}
+
+.wrapper:hover > div,
+.wrapper:hover:before {
+  transform: none;
+}
+
+.wrapper > div,
+.wrapper:before {
+  will-change: transform;
+  transition: 0.3s transform cubic-bezier(0.25, 0.46, 0.45, 1);
+}
+
+.checkMarks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 8px;
+}
+.planWrapper {
+  flex-direction: column;
+}
+.takeEmail {
+  border: 1px solid #a4a4a4;
+  border-radius: 43px;
+  padding: 14px 30px;
+  margin-bottom: 30px;
+  width: 40%;
+}
+.emailButton {
+  background-color: #ffce73;
+  color: #000;
+  padding: 16px 10px;
+  border-radius: 43px;
+  max-width: 327px;
+  margin: 0 auto 23px auto;
+  width: 30%;
+}
+.emailPhoneWrapper {
+  display: contents;
+}
+.days {
+  margin-left: 33px;
+}
+.timerText {
+  font-size: 20px;
+}
+.timeHead {
+  font-size: 60px;
+  font-weight: 900;
+}
+.timerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
