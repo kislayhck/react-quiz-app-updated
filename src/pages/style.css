@@ -18,3 +18,9 @@
   font-weight: 600;
   margin-left: 5px;
 }
+.stepByStepSection {
+  background-color: #6c5dd3;
+  margin-right: -12px;
+  margin-left: -12px;
+  height: 600px;
+}
