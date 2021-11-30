@@ -13,6 +13,7 @@ import Info from "./pages/Info";
 import Subscription from "./pages/Subscription";
 import School from "./pages/School";
 import GetMyPlan from "./pages/GetMyPlan";
+import Payment from "./pages/Payment";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/subscription" component={Subscription} />
           <Route path="/school" component={School} />
           <Route path="/getmyplan" component={GetMyPlan} />
+          <Route path="/payment" component={Payment} />
           <Route component={NotFound} />
         </Switch>
       </Container>

@@ -6,7 +6,8 @@ import GetMyPlann from "./GetMyPlann";
 
 export const iframe = () => {
   return {
-    __html: '<iframe src="./SVG/demo.html" width="640" height="450"></iframe>',
+    __html:
+      '<iframe src="./SVG/demo.html" class="questiongif" width="640" height="450"></iframe>',
   };
 };
 
