@@ -17,13 +17,13 @@ function ImprovementCard({ number, title, details, stepByStep }) {
           </Card.Body>
         </Card>
       ) : (
-        <Card className="improvementCard">
+        <Card className="stepDownCard">
           <Card.Body>
             <div className="d-flex justify-content-center align-items-center">
-              <div className="dot">{number}</div>
+              <div className="do1">{number}</div>
               <div className="improvementCardHeader">{title}</div>
             </div>
-            {/* <p>{details}</p> */}
+            <p className="mt-3">{details}</p>
           </Card.Body>
         </Card>
       )}

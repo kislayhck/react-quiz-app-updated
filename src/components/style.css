@@ -197,13 +197,33 @@
   justify-content: center;
   color: #ffffff;
 }
+.do1 {
+  height: 60px;
+  width: 60px;
+  background-color: #6c5dd3;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 22px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
 .improvementCardHeader {
   padding-left: 20px;
   font-size: 17px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 .improvementCard {
   box-shadow: 10px 10px 5px #aaaaaa;
   border-radius: 20px;
   border: 1px dashed;
+}
+.stepDownCard {
+  background-color: #7963d3;
+  color: white;
+  padding: 25px;
+  margin-top: 70px;
+  border-radius: 20px;
 }

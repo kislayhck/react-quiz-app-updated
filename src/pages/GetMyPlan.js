@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import FaqSection from "../components/FaqSection";
 import ImprovementCard from "../components/ImprovementCard";
 import Timer from "../components/Timer";
 
@@ -66,35 +67,40 @@ function GetMyPlan() {
         </div>
       </Container>
       <div className="stepByStepSection">
+        <h1 className="text-center mt-5 stepGuideSection">
+          Achieve impressive results following your step-by-step plan!
+        </h1>
         <Container>
           <Row>
             <Col md={4}>
               <ImprovementCard
                 stepByStep
-                number={1}
-                title="Follow a step-by-step personalized plan"
-                details="Do you remember the questions you answered? We have prepared a special plan based on yours answers to improve your life."
+                number="📆"
+                title="Practice every day"
+                details="Follow your daily plan and complete the indicated tasks"
               />
             </Col>
             <Col md={4}>
               <ImprovementCard
                 stepByStep
-                number={2}
-                title="Create reading habit in just 3 weeks"
-                details="Scientists have proven that it takes 28 days to develop a habit. 1256 users have already verified this. It's your turn!"
+                number="⏲️"
+                title="Read 15-min summary"
+                details="Just 15 minutes per day will be enough for an impressive result"
               />
             </Col>
             <Col md={4}>
               <ImprovementCard
                 stepByStep
-                number={3}
-                title="Achieve greater result with less effort"
-                details="Give a little, get a lot! Isn't that a dream? Why should you waste energy searching for information if we found it for you? Just download it!"
+                number="🚀"
+                title="Mark your progress"
+                details="Progress every day and measure your results"
               />
             </Col>
           </Row>
         </Container>
       </div>
+      <h1 className="text-center mt-5">Faq!</h1>
+      <FaqSection />
     </>
   );
 }

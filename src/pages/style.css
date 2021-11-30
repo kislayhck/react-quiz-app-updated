@@ -24,7 +24,9 @@
   margin-left: -12px;
   height: 600px;
 }
-
-.answer-section {
-  width: 70%;
+.stepGuideSection {
+  color: #ffffff;
+  width: 50%;
+  margin: auto;
+  padding-top: 50px;
 }
