@@ -156,6 +156,9 @@
   margin-bottom: 30px;
   width: 40%;
 }
+input:focus {
+  outline: none;
+}
 .emailButton {
   background-color: #ffce73;
   color: #000;
@@ -226,4 +229,15 @@
   padding: 25px;
   margin-top: 70px;
   border-radius: 20px;
+}
+.footer {
+  background: #6c5dd3;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+.instruction {
+  padding: 20px;
+  background: #6c5dd3;
+  color: white;
 }

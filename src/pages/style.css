@@ -30,10 +30,24 @@
   margin: auto;
   padding-top: 50px;
 }
+.percentCover {
+  border-radius: 120px;
+  padding: 50px;
+  background: #6c5dd3;
+  color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
 
 @media (max-width: 992px) {
   .questiongif {
     width: 100% !important;
     height: auto;
   }
+}
+.paymentCard {
+  background: #6c5dd3;
+  color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  padding: 20px;
+  border-radius: 20px;
 }

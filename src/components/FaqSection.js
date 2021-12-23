@@ -19,10 +19,10 @@ const FaqSection = () => {
   }
 
   return (
-    <div>
+    <div className="mt-5">
       <Container className="m-auto">
         <Row>
-          <Col>
+          <Col md={6} className="offset-3">
             <Accordion defaultActiveKey={activeId}>
               <Card className="rounded-lg mb-3 border-0">
                 <Accordion.Toggle
@@ -31,15 +31,15 @@ const FaqSection = () => {
                   onClick={() => toggleActive("0")}
                   className={activeId === "0" ? "active" : null}
                 >
-                  In non leo vel nunc elementum conguen non leo ?
+                  Reading Expands the Mind
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
                     <p className="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip
+                      Reading helps to expand the mind and give us more ideas.
+                      Reading has been proven to keep our minds young, healthy
+                      and sharp, with studies showing that reading can even help
+                      prevent alzheimer’s disease.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>
@@ -51,15 +51,16 @@ const FaqSection = () => {
                   onClick={() => toggleActive("1")}
                   className={activeId === "1" ? "active" : null}
                 >
-                  Donec semper nibh at facilisis interdum ?
+                  Reading Helps Improve Concentration
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="1">
                   <Card.Body>
                     <p className="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip
+                      Scientists from California, the USA proved that reading
+                      can train our mind how to focus properly, which is
+                      invaluable in nearly everything we do on a daily basis —
+                      whether it be as we study or even in our careers and in
+                      our personal relationships.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>
@@ -71,15 +72,15 @@ const FaqSection = () => {
                   onClick={() => toggleActive("2")}
                   className={activeId === "2" ? "active" : null}
                 >
-                  Aliquam nisl elit, egestas nec pharetra nec sed ?
+                  Reading Can Help You Destress
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="2">
                   <Card.Body>
                     <p className="text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip
+                      Recent study found that a mere six minutes of reading was
+                      shown to reduce muscle tension, and slowed down the heart
+                      rates of readers. It reduced stress levels by an
+                      impressive 68%.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>

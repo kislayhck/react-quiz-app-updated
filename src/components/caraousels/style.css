@@ -1,0 +1,74 @@
+.cardBox {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: black;
+  opacity: 0.2;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+.slides {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 60%;
+}
+
+.slide {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  background: white;
+  transition: all 450ms ease;
+}
+
+.slides .left {
+  left: 0%;
+  transform: scale(0.8);
+  z-index: 2;
+  visibility: visible;
+}
+
+.slides .center {
+  z-index: 10;
+  left: 50%;
+  transform: scale(1) translateX(-50%);
+  visibility: visible;
+}
+
+.slides .right {
+  left: 50%;
+  transform: scale(0.8) translateX(-125%);
+  z-index: 1;
+  visibility: visible;
+}
+.customDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.cardBoxItem {
+  width: 30rem;
+  height: 12rem;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}

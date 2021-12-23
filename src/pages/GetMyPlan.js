@@ -3,12 +3,22 @@ import { Col, Container, Row } from "react-bootstrap";
 import FaqSection from "../components/FaqSection";
 import ImprovementCard from "../components/ImprovementCard";
 import Timer from "../components/Timer";
+import DayPlan from "../assets/DaysTile.png";
+import Percent from "../assets/percent.png";
 
 import "./style.css";
+import { useHistory } from "react-router-dom";
+import CaraouselBox from "../components/caraousels";
 
 function GetMyPlan() {
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600);
+
+  const history = useHistory();
+
+  const redirectLink = () => {
+    history.push("/payment");
+  };
 
   return (
     <>
@@ -23,19 +33,15 @@ function GetMyPlan() {
         </p>
         <Timer expiryTimestamp={time} />
         <div className="d-flex aligh-items-center justify-content-center">
-          <button className="emailButton">Get My Plan</button>
+          <button className="emailButton" onClick={redirectLink}>
+            Get My Plan
+          </button>
         </div>
         <h2 className="text-center mt-5">28 Day Personal ImproveMent Plan</h2>
-        <p className="container p-5">
-          Est aliqua nostrud aute in elit veniam proident dolore occaecat minim
-          amet labore mollit. Occaecat sunt consectetur officia enim amet dolore
-          irure ullamco quis ex voluptate in ea laborum. Amet pariatur veniam
-          est incididunt mollit amet tempor qui sit Lorem amet. Amet aute ad qui
-          dolor id minim incididunt ut id magna est. Elit id labore excepteur
-          consequat sit consequat excepteur officia velit. Enim velit cillum
-          minim est Lorem Lorem amet velit proident proident. Id nisi laborum
-          eiusmod ut do.
-        </p>
+        <div className="container">
+          {/* <img src={DayPlan} alt="day plan" className="img-fluid" /> */}
+          <CaraouselBox />
+        </div>
         <h1 className="text-center mt-5">Improve yourself!</h1>
         <Container className="mt-5">
           <Row>
@@ -63,7 +69,9 @@ function GetMyPlan() {
           </Row>
         </Container>
         <div className="d-flex aligh-items-center justify-content-center mt-5">
-          <button className="emailButton">Get My Plan</button>
+          <button className="emailButton" onClick={redirectLink}>
+            Get My Plan
+          </button>
         </div>
       </Container>
       <div className="stepByStepSection">
@@ -101,6 +109,22 @@ function GetMyPlan() {
       </div>
       <h1 className="text-center mt-5">Faq!</h1>
       <FaqSection />
+      <Container className="percentCover mt-5 mb-5">
+        <Row className="d-flex align-items-center justify-content-center">
+          <Col md={6}>
+            <h2>100% money-back guarantee</h2>
+            <p>
+              We believe that our business tool will work for you and make you
+              more productive at work and in your daily life! We even are ready
+              to refund your money if you are not satisfied with our product.
+              For further details, please check our Money-back policy.
+            </p>
+          </Col>
+          <Col md={6}>
+            <img src={Percent} alt="percent" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

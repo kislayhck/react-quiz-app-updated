@@ -4,6 +4,7 @@ import serviceImg from "../assets/service.png";
 
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import Instructions from "../components/Instructions";
 
 const Info = () => {
   const [cookies] = useCookies(["user"]);
@@ -34,6 +35,9 @@ const Info = () => {
       </div>
       <h1 className="text-center mt-5">Steps to be followed</h1>
       <img src={serviceImg} alt="service" className="w-100 img-fluid stepsTo" />
+      <div className="p2 mt-5 mb-5">
+        <Instructions />
+      </div>
       <div className="bottomMain">
         <Button
           variant="primary"
