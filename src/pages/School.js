@@ -1,13 +1,17 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
-import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import { Container, Form, Row, Col, Button, Select } from "react-bootstrap";
+import Cities from "../components/cities.json";
+import states from "../components/indianstates.json";
 
 const School = () => {
   const [data, setData] = useState([]);
   const [schoolName, setSchoolName] = useState("");
   const [searchData, setSearchData] = useState([]);
   const [responseBack, setResponseBack] = useState(false);
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
 
   const columns = [
     {
@@ -62,7 +66,42 @@ const School = () => {
               />
             </Form.Group>
           </Col>
-          <Col md={2} className="mb-2">
+
+          <Col>
+            <Form.Group className="mb-3" controlId="ControlSelect2">
+              <Form.Control
+                as="select"
+                onChange={(e) => setCity(e.target.value)}
+              >
+                <option selected>Select city</option>
+                {Cities &&
+                  Cities.map((c) => (
+                    <option key={c.id} value={c.name}>
+                      {c.name}
+                    </option>
+                  ))}
+              </Form.Control>
+            </Form.Group>
+          </Col>
+
+          <Col>
+            <Form.Group className="mb-3" controlId="ControlSelect2">
+              <Form.Control
+                as="select"
+                onChange={(e) => setState(e.target.value)}
+              >
+                <option selected>Select State</option>
+                {states &&
+                  states.map((c) => (
+                    <option key={c.id} value={c.name}>
+                      {c.name}
+                    </option>
+                  ))}
+              </Form.Control>
+            </Form.Group>
+          </Col>
+
+          <Col md={2} className="mb-3">
             <Button onClick={handleSubmit} variant="success">
               Search
             </Button>
