@@ -52,6 +52,8 @@ const School = () => {
     setResponseBack(true);
   };
 
+  const filteredCity = Cities.filter((item) => item.state === state);
+
   return (
     <Container>
       <div>
@@ -71,11 +73,11 @@ const School = () => {
             <Form.Group className="mb-3" controlId="ControlSelect2">
               <Form.Control
                 as="select"
-                onChange={(e) => setCity(e.target.value)}
+                onChange={(e) => setState(e.target.value)}
               >
-                <option selected>Select city</option>
-                {Cities &&
-                  Cities.map((c) => (
+                <option selected>Select State</option>
+                {states &&
+                  states.map((c) => (
                     <option key={c.id} value={c.name}>
                       {c.name}
                     </option>
@@ -88,11 +90,11 @@ const School = () => {
             <Form.Group className="mb-3" controlId="ControlSelect2">
               <Form.Control
                 as="select"
-                onChange={(e) => setState(e.target.value)}
+                onChange={(e) => setCity(e.target.value)}
               >
-                <option selected>Select State</option>
-                {states &&
-                  states.map((c) => (
+                <option selected>Select city</option>
+                {filteredCity &&
+                  filteredCity.map((c) => (
                     <option key={c.id} value={c.name}>
                       {c.name}
                     </option>

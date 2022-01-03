@@ -9,75 +9,95 @@ function GetMyPlann() {
   const [cookies] = useCookies(["user"]);
   const [phone_number, setPhoneNumber] = useState();
   const [email, setEmail] = useState("");
+  const [error, setError] = useState();
 
-  const [school, setSchool] = useState();
   const [loader, setLoader] = useState(false);
 
   const name = cookies.firstName;
-  console.log(name, "name---");
+  const myPhoneNumber = Number(phone_number);
 
   const history = useHistory();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
-    e.preventDefault();
-    const newData = { name, email, phone_number };
-    var config = {
-      method: "post",
-      url: "https://mentringindia.herokuapp.com/admin/registration-api/registration",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: newData,
-    };
+  const handleSubmit = async (e) => {
+    const validateCheck = await validate();
+    if (validateCheck) {
+      e.preventDefault();
 
-    axios(config)
-      .then(function (response) {
-        if (response) {
-          setLoader(false);
-          setTimeout(() => {
+      setLoader(true);
+      const newData = { name, email, phone_number };
+      var config = {
+        method: "post",
+        url: "https://mentringindia.herokuapp.com/admin/registration-api/registration",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: newData,
+      };
+
+      axios(config)
+        .then(function (response) {
+          if (response.status === 200) {
+            setError("");
+            setPhoneNumber("");
+            setEmail("");
+            setLoader(false);
             history.push("/getmyplan");
-          }, 9000);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } else {
+      console.log(validateCheck, "failed");
+    }
+  };
+
+  const validate = () => {
+    if (!email || !myPhoneNumber || !myPhoneNumber.toString().length === 10) {
+      setError("Please Fill the form properly");
+      return false;
+    } else {
+      return true;
+    }
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center planWrapper">
-      <h2>Email/Phone No.</h2>
-      <p>
-        Enter your email to receive your personalized improvement plan right
-        now!
-      </p>
-      <div className="emailPhoneWrapper">
-        <input
-          placeholder="enter your email here"
-          type="text"
-          onChange={(e) => setEmail(e.target.value)}
-          className="takeEmail mt-5"
-        />
-        <input
-          placeholder="enter your phone no."
-          type="number"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          className="takeEmail"
-        />
-        <button class="emailButton" type="button" onClick={handleSubmit}>
-          Get My Plan
-          {loader && (
-            <span
-              class="spinner-border spinner-border-sm sr-only"
-              role="status"
-              aria-hidden="true"
-            ></span>
+    <>
+      {loader && (
+        <span
+          class="spinner-border spinner-border-sm sr-only"
+          role="status"
+          aria-hidden="true"
+        ></span>
+      )}
+      <div className="d-flex align-items-center justify-content-center planWrapper">
+        <p>{error}</p>
+        <h2>Email/Phone No.</h2>
+        <p>
+          Enter your email to receive your personalized improvement plan right
+          now!
+        </p>
+        <div className="emailPhoneWrapper">
+          <input
+            placeholder="enter your email here"
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            className="takeEmail mt-5"
+          />
+          <input
+            placeholder="enter your phone no."
+            type="number"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            className="takeEmail"
+          />
+          {!loader && (
+            <button class="emailButton" type="button" onClick={handleSubmit}>
+              Get My Plan
+            </button>
           )}
-        </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
