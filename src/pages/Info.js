@@ -15,7 +15,7 @@ const Info = () => {
   };
 
   return (
-    <>
+    <div className="container-fluid">
       <div className="mainBanner">
         <div className="row">
           <div className="col-md-6 infoMain">
@@ -49,7 +49,7 @@ const Info = () => {
           Questions
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

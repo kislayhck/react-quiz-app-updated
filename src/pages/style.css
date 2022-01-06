@@ -44,10 +44,35 @@
     height: auto;
   }
 }
+
 .paymentCard {
-  background: #6c5dd3;
-  color: white;
+  background: #fdfdfd;
+  color: rgb(0, 0, 0);
   box-shadow: 10px 10px 5px #aaaaaa;
   padding: 20px;
   border-radius: 20px;
+  border: 1px solid;
+}
+
+.paymentCardOne {
+  background: #e7e7e7;
+  color: rgb(139 132 132);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.paymentHeader {
+  background: #6c5dd3;
+  padding: 70px;
+  margin-top: -25px;
+  color: white;
+  margin-bottom: 36px;
+  background-image: url("../assets/mentoringIndia.png");
+}
+
+.paymentInfo {
+  width: 600px;
+  margin: auto;
+  margin-top: 45px;
 }

@@ -18,19 +18,17 @@ import Payment from "./pages/Payment";
 const App = () => {
   return (
     <Layout>
-      <Container fluid>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} />
-          <Route path="/info" component={Info} />
-          <Route path="/questions" component={Questions} />
-          <Route path="/subscription" component={Subscription} />
-          <Route path="/school" component={School} />
-          <Route path="/getmyplan" component={GetMyPlan} />
-          <Route path="/payment" component={Payment} />
-          <Route component={NotFound} />
-        </Switch>
-      </Container>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} />
+        <Route path="/info" component={Info} />
+        <Route path="/questions" component={Questions} />
+        <Route path="/subscription" component={Subscription} />
+        <Route path="/school" component={School} />
+        <Route path="/getmyplan" component={GetMyPlan} />
+        <Route path="/payment" component={Payment} />
+        <Route component={NotFound} />
+      </Switch>
     </Layout>
   );
 };

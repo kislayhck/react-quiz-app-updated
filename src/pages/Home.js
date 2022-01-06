@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mentor from "../assets/mentoring.png";
+import mentor from "../assets/mentoringIndia.png";
 import rodemap from "../assets/roadMap.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const Home = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-6">
-          <img src={mentor} alt="mentor" className="w-100" />
+          <img src={mentor} alt="mentor" className="w-100 h-100" />
         </div>
         <div className="col-md-6 p-5 mt-5">
           <h2>Mentoring India provides you best mentor service.</h2>

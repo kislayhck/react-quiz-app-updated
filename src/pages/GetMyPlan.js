@@ -9,6 +9,8 @@ import Percent from "../assets/percent.png";
 import "./style.css";
 import { useHistory } from "react-router-dom";
 import CaraouselBox from "../components/caraousels";
+import Slider from "../components/slider";
+import Comment from "../components/Comment";
 
 function GetMyPlan() {
   const time = new Date();
@@ -37,10 +39,11 @@ function GetMyPlan() {
             Get My Plan
           </button>
         </div>
-        <h2 className="text-center mt-5">28 Day Personal ImproveMent Plan</h2>
-        <div className="container">
+        <h2 className="text-center mt-5">7 Day Personal ImproveMent Plan</h2>
+        <div className="container mt-5">
           {/* <img src={DayPlan} alt="day plan" className="img-fluid" /> */}
-          <CaraouselBox />
+          {/* <CaraouselBox /> */}
+          <Slider />
         </div>
         <h1 className="text-center mt-5">Improve yourself!</h1>
         <Container className="mt-5">
@@ -74,7 +77,7 @@ function GetMyPlan() {
           </button>
         </div>
       </Container>
-      <div className="stepByStepSection">
+      {/* <div className="stepByStepSection">
         <h1 className="text-center mt-5 stepGuideSection">
           Achieve impressive results following your step-by-step plan!
         </h1>
@@ -106,10 +109,10 @@ function GetMyPlan() {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <h1 className="text-center mt-5">Faq!</h1>
       <FaqSection />
-      <Container className="percentCover mt-5 mb-5">
+      {/* <Container className="percentCover mt-5 mb-5">
         <Row className="d-flex align-items-center justify-content-center">
           <Col md={6}>
             <h2>100% money-back guarantee</h2>
@@ -122,6 +125,17 @@ function GetMyPlan() {
           </Col>
           <Col md={6}>
             <img src={Percent} alt="percent" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container> */}
+      <h1 className="text-center mt-5">Comments</h1>
+      <Container className="mt-5">
+        <Row>
+          <Col md={6}>
+            <Comment />
+          </Col>
+          <Col md={6}>
+            <Comment />
           </Col>
         </Row>
       </Container>

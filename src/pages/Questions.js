@@ -3,7 +3,7 @@ import { questions } from "./Data";
 
 const Questions = () => {
   return (
-    <div className="">
+    <div className="container-fluid">
       <Question questions={questions} />
     </div>
   );
