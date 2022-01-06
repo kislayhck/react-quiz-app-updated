@@ -7,9 +7,9 @@ function ImprovementCard({ number, title, details, stepByStep }) {
   return (
     <>
       {!stepByStep ? (
-        <Card className="improvementCard">
+        <Card className="improvementCard card-body h-100">
           <Card.Body>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center ">
               <div className="dot">{number}</div>
               <div className="improvementCardHeader">{title}</div>
             </div>
@@ -17,9 +17,9 @@ function ImprovementCard({ number, title, details, stepByStep }) {
           </Card.Body>
         </Card>
       ) : (
-        <Card className="stepDownCard">
+        <Card className="stepDownCard card-body h-100">
           <Card.Body>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center ">
               <div className="do1">{number}</div>
               <div className="improvementCardHeader">{title}</div>
             </div>

@@ -47,7 +47,7 @@ function GetMyPlan() {
         </div>
         <h1 className="text-center mt-5">Improve yourself!</h1>
         <Container className="mt-5">
-          <Row>
+          <Row className="g-4">
             <Col md={4}>
               <ImprovementCard
                 number={1}

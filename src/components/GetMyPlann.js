@@ -53,8 +53,19 @@ function GetMyPlann() {
   };
 
   const validate = () => {
+    let regEmail =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    let regPhone = /^[0-9]{10}$/;
+
     if (!email || !myPhoneNumber || !myPhoneNumber.toString().length === 10) {
       setError("Please Fill the form properly");
+      return false;
+    } else if (!regEmail.test(email)) {
+      setError("Invalid Email Address");
+      return false;
+    } else if (!regPhone.test(myPhoneNumber)) {
+      setError("Please enter valid phone number");
       return false;
     } else {
       return true;
@@ -71,12 +82,12 @@ function GetMyPlann() {
         ></span>
       )}
       <div className="d-flex align-items-center justify-content-center planWrapper">
-        <p>{error}</p>
         <h2>Email/Phone No.</h2>
         <p>
           Enter your email to receive your personalized improvement plan right
           now!
         </p>
+        <span className="text-danger">{error}</span>
         <div className="emailPhoneWrapper">
           <input
             placeholder="enter your email here"

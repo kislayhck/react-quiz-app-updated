@@ -21,8 +21,8 @@ const FaqSection = () => {
   return (
     <div className="mt-5">
       <Container className="m-auto">
-        <Row>
-          <Col md={6} className="offset-3">
+        <Row className="justify-content-md-center">
+          <Col md={6} className="auto">
             <Accordion defaultActiveKey={activeId}>
               <Card className="rounded-lg mb-3 border-0">
                 <Accordion.Toggle
