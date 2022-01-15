@@ -39,8 +39,13 @@ function PreForm() {
             required
           />
         </Form.Group>
-        <Button variant="primary" size="lg" type="submit" className="w-100">
-          Submit
+        <Button
+          variant="primary"
+          size="lg"
+          type="submit"
+          className="button-color w-100"
+        >
+          Register
         </Button>
       </Form>
     </div>

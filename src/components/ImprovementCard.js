@@ -10,8 +10,7 @@ function ImprovementCard({ number, title, details, stepByStep }) {
         <Card className="improvementCard card-body h-100">
           <Card.Body>
             <div className="d-flex justify-content-center align-items-center ">
-              <div className="dot">{number}</div>
-              <div className="improvementCardHeader">{title}</div>
+              <div className="improvementCardSkill">{title}</div>
             </div>
             <p>{details}</p>
           </Card.Body>

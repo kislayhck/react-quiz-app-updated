@@ -19,18 +19,19 @@ main {
   box-shadow: 10px 10px;
 }
 .button-color {
-  background-color: #b62d77;
+  background-color: RGB(39, 55, 79);
   border: 0;
+  font-size: 21px;
 }
 .button-color:hover {
-  background-color: #ee8080;
+  background-color: rgb(58, 76, 105);
   border: 0;
 }
 .mainBanner {
-  background: #ebebeb;
+  background: #6c5dd3;
+  color: white;
 }
 .infoMain {
-  margin: auto;
   padding: 80px;
 }
 .spinner-border {
@@ -50,14 +51,24 @@ main {
   margin-top: 100px;
 }
 .bottomMain {
-  padding: 21px;
   background-color: #b62d77;
   display: flex;
   flex-direction: row-reverse;
-  position: sticky;
   bottom: 0;
+  align-items: center;
+  padding: 10px;
+  color: white;
 }
 .subswrap {
   width: 20px;
   margin: auto;
+}
+
+.dDVmpr {
+  background-color: RGB(39, 55, 79) !important;
+  box-shadow: none !important;
+}
+
+.hBeDhF {
+  background-color: rgb(0 0 0 / 10%) !important;
 }

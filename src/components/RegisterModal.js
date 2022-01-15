@@ -17,11 +17,11 @@ function RegisterModal({ handleShow, show, handleClose, score, initial }) {
             <FormField onHide={handleClose} score={score} />
           )}
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

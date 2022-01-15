@@ -14,7 +14,7 @@
   padding-top: 20px;
 }
 .planNow {
-  color: #6c5dd3;
+  color: RGB(39, 55, 79);
   font-weight: 600;
   margin-left: 5px;
 }
@@ -63,7 +63,7 @@
 }
 
 .paymentHeader {
-  background: #6c5dd3;
+  background: RGB(39, 55, 79);
   padding: 70px;
   margin-top: -25px;
   color: white;
@@ -75,4 +75,21 @@
   width: 600px;
   margin: auto;
   margin-top: 45px;
+}
+
+.step3_mentor {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.steps {
+  text-align: center;
+  font-weight: 900;
+}
+
+.borderSteps {
+  margin-top: 100px;
+  border: 1px solid wheat;
+  padding: 20px;
+  background: antiquewhite;
 }

@@ -107,12 +107,14 @@ function Question({ questions }) {
           ) : (
             <>
               <div className="row questionRightBar">
-                <div className="col-md-6">
+                <div className="col-md-6 iFrame">
                   <div dangerouslySetInnerHTML={iframe()} />
                 </div>
                 <div className="col-md-6 mt-5">
                   <div className="question-section">
-                    <h3>Answer the following questions</h3>
+                    <h3 style={{ marginLeft: "17px" }}>
+                      Answer the following questions
+                    </h3>
                     <div className="question-count">
                       <span>Question {currentQuestion + 1}</span>/
                       {questions.length}
@@ -134,11 +136,21 @@ function Question({ questions }) {
                       </>
                     ) : null}
                   </div>
-                  <div className="answer-section">
+                  <div
+                    className={
+                      !questions[currentQuestion].questionImg
+                        ? "answer-section"
+                        : "d-flex justify-content-center mt-5"
+                    }
+                  >
                     {questions[currentQuestion].answerOptions.map(
                       (answerOption) => (
                         <button
-                          className="options col-md-3"
+                          className={
+                            !answerOption.answerText
+                              ? "circleOption"
+                              : "options col-md-4"
+                          }
                           onClick={() =>
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
@@ -152,10 +164,10 @@ function Question({ questions }) {
                                 className="img-fluid"
                               />
                             </div>
-                          ) : (
-                            ""
-                          )}
-                          <span>{answerOption.AnsImoji}</span>
+                          ) : null}
+                          <span className="optionEmoji">
+                            {answerOption.AnsImoji}
+                          </span>
                           {answerOption.answerText}
                         </button>
                       )

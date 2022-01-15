@@ -29,12 +29,12 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "To become better in a short time",
+        answerText: "Better in a short time",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "Work through your strengths and weaknesses",
+        answerText: "Work through your strengths",
         isCorrect: true,
         AnsImoji: "🕘",
       },
@@ -101,12 +101,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -118,12 +116,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -136,12 +132,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -154,12 +148,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -210,12 +202,12 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: " I definitely have to improve it",
+        answerText: "Improve it",
         isCorrect: true,
         AnsImoji: "😛",
       },
       {
-        answerText: " Not sure it is my case",
+        answerText: "Not sure",
         isCorrect: true,
         AnsImoji: "🤔",
       },
@@ -255,12 +247,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -273,12 +263,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -291,12 +279,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -310,12 +296,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -354,7 +338,7 @@ export const questions = [
         AnsImoji: "😃",
       },
       {
-        answerText: " Somewhere agree",
+        answerText: "  agree",
         isCorrect: true,
         AnsImoji: "🙄",
       },
@@ -373,12 +357,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -392,12 +374,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -409,12 +389,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -453,7 +431,7 @@ export const questions = [
         AnsImoji: "😒",
       },
       {
-        answerText: "Somewhere agree",
+        answerText: " agree",
         isCorrect: true,
         AnsImoji: "🙄",
       },
@@ -472,12 +450,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -491,12 +467,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -510,12 +484,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -532,7 +504,7 @@ export const questions = [
         AnsImoji: "😒",
       },
       {
-        answerText: "Somewhere agree",
+        answerText: " agree",
         isCorrect: true,
         AnsImoji: "🙄",
       },
@@ -555,7 +527,7 @@ export const questions = [
         AnsImoji: "🤡",
       },
       {
-        answerText: "Somewhere agree",
+        answerText: " agree",
         isCorrect: true,
         AnsImoji: "😼",
       },
@@ -577,7 +549,7 @@ export const questions = [
         AnsImoji: "💪",
       },
       {
-        answerText: "Somewhere agree",
+        answerText: " agree",
         isCorrect: true,
         AnsImoji: "😅",
       },
@@ -596,12 +568,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -615,12 +585,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },
@@ -634,12 +602,10 @@ export const questions = [
     answerOptions: [
       // { card: false },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "",
         isCorrect: true,
         AnsImoji: "👎",
       },

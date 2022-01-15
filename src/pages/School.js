@@ -46,7 +46,7 @@ const School = () => {
     e.preventDefault();
     axios
       .get(
-        `https://mentringindia.herokuapp.com/admin/school-api/registration?Schoolname=${schoolName}`
+        `https://mentringindia.herokuapp.com/admin/school-api/registration?Schoolname=${schoolName}&city=${city}&state=${state}`
       )
       .then((response) => setSearchData(response.data.data));
     setResponseBack(true);
@@ -58,7 +58,7 @@ const School = () => {
     <Container>
       <div>
         <Row className="d-flex flex-wrap align-items-center justify-content-center">
-          <Col md={6}>
+          {/* <Col md={6}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="text"
@@ -67,7 +67,7 @@ const School = () => {
                 onChange={(e) => setSchoolName(e.target.value)}
               />
             </Form.Group>
-          </Col>
+          </Col> */}
 
           <Col>
             <Form.Group className="mb-3" controlId="ControlSelect2">

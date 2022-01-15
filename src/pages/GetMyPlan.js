@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 import CaraouselBox from "../components/caraousels";
 import Slider from "../components/slider";
 import Comment from "../components/Comment";
+import Skills from "../components/Skills";
 
 function GetMyPlan() {
   const time = new Date();
@@ -44,28 +45,35 @@ function GetMyPlan() {
           {/* <img src={DayPlan} alt="day plan" className="img-fluid" /> */}
           {/* <CaraouselBox /> */}
           <Slider />
+          {/* <div>
+            <h1 className="text-center mt-5 mb-5">Self Transformation</h1>
+            <Skills />
+          </div> */}
         </div>
-        <h1 className="text-center mt-5">Improve yourself!</h1>
+        <h1 className="text-center mt-5">Self Transformation</h1>
         <Container className="mt-5">
           <Row className="g-4">
-            <Col md={4}>
+            <Col md={3}>
               <ImprovementCard
-                number={1}
-                title="Follow a step-by-step personalized plan"
+                title="Habit"
                 details="Do you remember the questions you answered? We have prepared a special plan based on yours answers to improve your life."
               />
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <ImprovementCard
-                number={2}
-                title="Create reading habit in just 3 weeks"
+                title="Skills"
                 details="Scientists have proven that it takes 28 days to develop a habit. 1256 users have already verified this. It's your turn!"
               />
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <ImprovementCard
-                number={3}
-                title="Achieve greater result with less effort"
+                title="Value"
+                details="Give a little, get a lot! Isn't that a dream? Why should you waste energy searching for information if we found it for you? Just download it!"
+              />
+            </Col>
+            <Col md={3}>
+              <ImprovementCard
+                title="Strength"
                 details="Give a little, get a lot! Isn't that a dream? Why should you waste energy searching for information if we found it for you? Just download it!"
               />
             </Col>
@@ -132,10 +140,18 @@ function GetMyPlan() {
       <Container className="mt-5">
         <Row>
           <Col md={6}>
-            <Comment />
+            <Comment
+              name="Divya Dawar"
+              details="My uncle is a doctor. He might be proficient in his profession but he can't be a good personalized mentor since he doesn't know the real ME.
+              With the help of 'Mentoringindia'"
+            />
           </Col>
           <Col md={6}>
-            <Comment />
+            <Comment
+              name="Divya Dawar"
+              details="My uncle is a doctor. He might be proficient in his profession but he can't be a good personalized mentor since he doesn't know the real ME.
+              With the help of 'Mentoringindia'"
+            />
           </Col>
         </Row>
       </Container>

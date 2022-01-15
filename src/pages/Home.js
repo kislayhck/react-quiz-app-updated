@@ -1,6 +1,6 @@
 import { useState } from "react";
 import mentor from "../assets/mentoringIndia.png";
-import rodemap from "../assets/roadMap.png";
+import rodemap from "../assets/rodemap.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import RegisterModal from "../components/RegisterModal";
@@ -13,16 +13,17 @@ const Home = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-6">
-          <img src={mentor} alt="mentor" className="w-100 h-100" />
+        <div className="col-md-7">
+          <img src={mentor} alt="mentor" className="img-fluid" />
         </div>
-        <div className="col-md-6 p-5 mt-5">
-          <h2>Mentoring India provides you best mentor service.</h2>
+        <div className="col-md-5 p-5 mt-2">
+          <h2>Providing students with what they need the most</h2>
           <p>
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. Lorem ipsum may be
-            used as a placeholder before final copy is available.
+            Mentoring India is a platform that gives students and young
+            professionals wings and lets them believe in the power of their
+            dreams. Relying on the passion of the students and backed by
+            industry experts, we help you create the future that you want for
+            yourself.
           </p>
           <div className="p-2">
             <Button
@@ -32,12 +33,13 @@ const Home = () => {
               onClick={handleShow}
               className="button-color w-100"
             >
-              We want to know you ?
+              Join us, to get started
             </Button>
           </div>
         </div>
       </div>
-      <img src={rodemap} alt="mentor" className="w-100" />
+      {/* <h1 className="text-center mt-5">How we works</h1>
+      <img src={rodemap} alt="mentor" className="w-100" /> */}
       <RegisterModal
         show={show}
         handleClose={handleClose}

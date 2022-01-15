@@ -1,6 +1,7 @@
 {
-  "name": "react-bootstrap-starter",
+  "name": "mentoringindia",
   "version": "0.4.0",
+  "homepage": "https://mentoringindia.co.in",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",

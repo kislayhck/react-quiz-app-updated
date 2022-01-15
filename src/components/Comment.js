@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Comment() {
+function Comment({ details, name }) {
   return (
     <div className=" commentCard mb-5">
       <div className="commentImg">
@@ -12,10 +12,8 @@ function Comment() {
         />
       </div>
       <div className="commentContent">
-        <p>
-          Sign up for free to save your work0/3 Sandboxes used - Anonymous.
-          CodeSandbox. react-elastic-carousel Embed Fork Create Sandbox Sign
-        </p>
+        <h2>{name}</h2>
+        <p>{details}</p>
       </div>
     </div>
   );

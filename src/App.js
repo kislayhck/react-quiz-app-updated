@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import { Route, Switch } from "react-router-dom";
 
 // Layout
