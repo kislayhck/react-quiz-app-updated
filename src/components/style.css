@@ -229,6 +229,13 @@ input:focus {
   font-weight: bold;
 }
 
+.paymentCardHeader {
+  font-size: 17px;
+  margin-bottom: -19px;
+  font-weight: bold;
+  padding: 20px;
+}
+
 .improvementCardSkill {
   background-color: rgb(234, 140, 52);
   padding-left: 20px;
@@ -300,6 +307,10 @@ input:focus {
   border: 1px solid black;
 }
 
+.dropOpt {
+  height: 10px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .mobile-logo {
     margin-left: 85px;
@@ -328,5 +339,8 @@ input:focus {
   }
   .stepDownCard {
     height: 280px;
+  }
+  .footerText {
+    font-size: 11px;
   }
 }

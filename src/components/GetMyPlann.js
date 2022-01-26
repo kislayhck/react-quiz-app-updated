@@ -6,14 +6,18 @@ import axios from "axios";
 import "./style.css";
 
 function GetMyPlann() {
-  const [cookies] = useCookies(["user"]);
+  const [cookies] = useCookies(["allData"]);
   const [phone_number, setPhoneNumber] = useState();
   const [email, setEmail] = useState("");
   const [error, setError] = useState();
 
   const [loader, setLoader] = useState(false);
 
-  const name = cookies.firstName;
+  const name = cookies.allData.firstName;
+  const city = cookies.allData.city;
+  const state = cookies.allData.state;
+  const classes = cookies.allData.classStd;
+
   const myPhoneNumber = Number(phone_number);
 
   const history = useHistory();
@@ -24,7 +28,7 @@ function GetMyPlann() {
       e.preventDefault();
 
       setLoader(true);
-      const newData = { name, email, phone_number };
+      const newData = { name, email, phone_number, city, state, classes };
       var config = {
         method: "post",
         url: "https://mentringindia.herokuapp.com/admin/registration-api/registration",

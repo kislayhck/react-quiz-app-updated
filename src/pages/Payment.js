@@ -48,7 +48,7 @@ const Payment = () => {
             <Card className="d-flex justify-content-center align-items-center paymentCardOne">
               <Card.Body>
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="improvementCardHeader">1-Month Plan</div>
+                  <div className="paymentCardHeader">1-Month Plan</div>
                 </div>
                 <div>
                   <h2>One Month Plan</h2>
@@ -61,7 +61,7 @@ const Payment = () => {
             <Card className="d-flex justify-content-center align-items-center paymentCard">
               <Card.Body>
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="improvementCardHeader">7 Day Plan</div>
+                  <div className="paymentCardHeader">7 Day Plan</div>
                 </div>
                 <div>
                   <h2>One Month Plan</h2>
@@ -77,7 +77,7 @@ const Payment = () => {
             <Card className="d-flex justify-content-center align-items-center paymentCardOne">
               <Card.Body>
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="improvementCardHeader">6-Month Plan</div>
+                  <div className="paymentCardHeader">6-Month Plan</div>
                 </div>
                 <div>
                   <h2>One Month Plan</h2>
@@ -88,15 +88,7 @@ const Payment = () => {
           </Col>
         </Row>
       </Container>
-      <div className="text-center p-3">
-        <p className="paymentInfo">
-          $0.99 trial for 3 days, then an auto renewable subscription ($69.99
-          for half-year subscription). You will receive new summaries of books
-          in your mail according to your subscription period. Subscription could
-          be canceled any time. Check cancellation policy.
-        </p>
-      </div>
-      <h1 className="text-center mt-5">Faq!</h1>
+      <h1 className="text-center mt-5">Frequently Asked Questions</h1>
       <FaqSection />
       <h1 className="text-center mt-5">Comments</h1>
       <Container className="mt-5">

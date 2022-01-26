@@ -20,14 +20,11 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="text-center text-capitalize footer d-flex justify-content-between">
+      <footer className="text-center text-capitalize footer d-flex justify-content-between footerText">
         copyright mentoring india &copy; {year}
         <div>
           <a href="https://instagram.com" rel="noreferrer" target="_blank">
             <AiFillMail style={logoColor} />
-          </a>
-          <a href="https://facebook.com" rel="noreferrer" target="_blank">
-            <AiFillFacebook style={logoColor} />
           </a>
           <a
             href="https://instagram.com/mentoring_india?utm_medium=copy_link"

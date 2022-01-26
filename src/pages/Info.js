@@ -16,8 +16,10 @@ import Instructions from "../components/Instructions";
 const Info = () => {
   const [text, setText] = useState("");
 
-  const [cookies] = useCookies(["user"]);
+  const [cookies] = useCookies(["allData"]);
   const history = useHistory();
+
+  console.log(cookies, "cook----");
 
   const handleClick = () => {
     history.push("/questions");
@@ -53,8 +55,8 @@ const Info = () => {
         <div className="row">
           <div className="col-md-6 infoMain">
             <h3>Hi,</h3>
-            <h1>{cookies.firstName}</h1>
-            <h1>{cookies.lastName}</h1>
+            <h1>{cookies.allData.firstName}</h1>
+            <h1>{cookies.allData.lastName}</h1>
           </div>
           <div className="col-md-6" style={{ marginTop: "-70px" }}>
             <img src={MainImg} alt="mentor" className="img-fluid" />
@@ -62,8 +64,7 @@ const Info = () => {
         </div>
       </div>
       <h1 className="text-center mt-5">
-        The journey of a growth-driven mindset for your career begins with 4
-        small steps
+        The journey of a growth-driven mindset begins with 4 small steps
       </h1>
       <div className="container borderSteps" style={{ marginTop: "100px" }}>
         <div className="row">
@@ -144,7 +145,7 @@ const Info = () => {
           <div className="col-md-5 offset-md-1">
             <h2 className="mt-5 steps">Step 3.</h2>
             <h3 className="mt-3">
-              Find your mentor — your friend, philosopher, and guide
+              Find your mentor — your friend, philosopher and guide
             </h3>
             <div className="step3_mentor">
               <h5>{text}</h5>
