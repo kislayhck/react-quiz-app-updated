@@ -82,10 +82,10 @@ function GetMyPlann() {
         ></span>
       )}
       <div className="d-flex align-items-center justify-content-center planWrapper">
-        <h2>Email/Phone No.</h2>
+        <h2>The wait is now over!</h2>
         <p>
-          Enter your email to receive your personalized improvement plan right
-          now!
+          Drop your email or phone number here to receive your personalized
+          improvement plan right now!
         </p>
         <span className="text-danger">{error}</span>
         <div className="emailPhoneWrapper">

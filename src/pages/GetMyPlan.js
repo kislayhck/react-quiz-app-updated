@@ -6,12 +6,16 @@ import Timer from "../components/Timer";
 import DayPlan from "../assets/DaysTile.png";
 import Percent from "../assets/percent.png";
 
-import "./style.css";
 import { useHistory } from "react-router-dom";
 import CaraouselBox from "../components/caraousels";
 import Slider from "../components/slider";
 import Comment from "../components/Comment";
 import Skills from "../components/Skills";
+
+import Com1 from "../assets/1c.jpeg";
+import Com2 from "../assets/2c.jpeg";
+
+import "./style.css";
 
 function GetMyPlan() {
   const time = new Date();
@@ -27,12 +31,21 @@ function GetMyPlan() {
     <>
       <Container>
         <h1 className="getMyPlanTitle">
-          Are you ready to unleash your personality to the full extent?
+          Are you ready to unlock your potential and become the best version of
+          yourself?
         </h1>
         <p className="getMyPlanDescription">
-          We have created a unique plan for you to improve your life and bring
-          it to a new level. All you need to do is follow our instructions.
-          <span className="planNow">Get your plan right now!</span>
+          A plan is the first step towards a better future, and we have done
+          exactly that for you. Our team of experts has curated a 7 days
+          personal improvement plan that will give you the necessary headstart
+          on the right track.
+          <span
+            className="planNow"
+            onClick={redirectLink}
+            style={{ cursor: "pointer" }}
+          >
+            Get your plan right now!
+          </span>
         </p>
         <Timer expiryTimestamp={time} />
         <div className="d-flex aligh-items-center justify-content-center">
@@ -50,31 +63,32 @@ function GetMyPlan() {
             <Skills />
           </div> */}
         </div>
-        <h1 className="text-center mt-5">Self Transformation</h1>
+        <h1 className="text-center mt-5">Improve Yourself!</h1>
         <Container className="mt-5">
           <Row className="g-4">
             <Col md={3}>
               <ImprovementCard
                 title="Habit"
-                details="Do you remember the questions you answered? We have prepared a special plan based on yours answers to improve your life."
+                details="Habits form a great part of our character. Minor day-to-day activities like planning our day in the morning, having a balanced diet, exercising, and reading a book before bed help us achieve better lifestyle goals and keep us consistent and motivated."
               />
             </Col>
             <Col md={3}>
               <ImprovementCard
                 title="Skills"
-                details="Scientists have proven that it takes 28 days to develop a habit. 1256 users have already verified this. It's your turn!"
+                details="Learning new skills not only boosts your confidence but at the same time makes you relevant to the most recent trends in the domain of your choice. When you step out of your comfort zone and learn new skills, you make yourself open to growth and changes.
+                "
               />
             </Col>
             <Col md={3}>
               <ImprovementCard
                 title="Value"
-                details="Give a little, get a lot! Isn't that a dream? Why should you waste energy searching for information if we found it for you? Just download it!"
+                details="Actions speak louder than words, and your values are the guiding light of your actions. Apart from adding peace to your life, your values are a very crucial character trait."
               />
             </Col>
             <Col md={3}>
               <ImprovementCard
                 title="Strength"
-                details="Give a little, get a lot! Isn't that a dream? Why should you waste energy searching for information if we found it for you? Just download it!"
+                details="Your strengths set you apart from the crowd. Channeling them in the right direction allows you to be more aware of yourself and pushes you to overcome challenges in your unique way."
               />
             </Col>
           </Row>
@@ -118,7 +132,7 @@ function GetMyPlan() {
           </Row>
         </Container>
       </div> */}
-      <h1 className="text-center mt-5">Faq!</h1>
+      <h1 className="text-center mt-5">Frequently Asked Questions</h1>
       <FaqSection />
       {/* <Container className="percentCover mt-5 mb-5">
         <Row className="d-flex align-items-center justify-content-center">
@@ -141,16 +155,17 @@ function GetMyPlan() {
         <Row>
           <Col md={6}>
             <Comment
-              name="Divya Dawar"
-              details="My uncle is a doctor. He might be proficient in his profession but he can't be a good personalized mentor since he doesn't know the real ME.
-              With the help of 'Mentoringindia'"
+              img={Com1}
+              name="Divya Dawar,Chandigarh"
+              details="Mentor is someone who allows you to see the hope inside yourself!  
+              My personal experience was very good with them. So I would like to say thank you mentoring india ,for being there helping me to build my career and making them sucessful!"
             />
           </Col>
           <Col md={6}>
             <Comment
-              name="Divya Dawar"
-              details="My uncle is a doctor. He might be proficient in his profession but he can't be a good personalized mentor since he doesn't know the real ME.
-              With the help of 'Mentoringindia'"
+              img={Com2}
+              name="Prince Kalotra,Ludhiana"
+              details="My uncle is a doctor. He might be proficient in his profession but he can't be a good personalized mentor since he doesn't know the real ME. With the help of 'MentoringIndia'.I want to help mankind by establishing a world that can predict the future and wish to have a mentor who can direct me onto this path."
             />
           </Col>
         </Row>

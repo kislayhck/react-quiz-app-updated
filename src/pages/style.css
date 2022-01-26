@@ -93,3 +93,31 @@
   padding: 20px;
   background: antiquewhite;
 }
+
+.whyMentor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 99px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .getMyPlanTitle {
+    width: 100%;
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .getMyPlanDescription {
+    width: 100%;
+  }
+  .paymentInfo {
+    width: 100%;
+  }
+  .leafContainer {
+    display: none;
+  }
+  .whyMentor {
+    padding: 0;
+  }
+}

@@ -15,7 +15,7 @@
   font-size: 28px;
   padding: 20px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 24px;
   min-width: 248px;
   min-height: 100px;
 }
@@ -223,9 +223,9 @@ input:focus {
   color: #ffffff;
 }
 .improvementCardHeader {
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 17px;
-  margin-bottom: 10px;
+  margin-bottom: -19px;
   font-weight: bold;
 }
 
@@ -247,9 +247,10 @@ input:focus {
 .stepDownCard {
   background-color: #f9f9f9;
   color: black;
-  padding: 25px;
+  padding: 10px;
   border-radius: 20px;
   margin-left: 23px;
+  height: 225px;
 }
 .footer {
   background: #efefef;
@@ -257,6 +258,7 @@ input:focus {
   color: black;
   font-weight: bold;
   border-top: 1px solid #8b8b8b;
+  align-items: center;
 }
 .instruction {
   padding: 20px;
@@ -283,10 +285,11 @@ input:focus {
   border-radius: 25px;
   border: 1px solid;
   padding: 50px;
+  height: 300px;
 }
 .commentImg img {
   border-radius: 17%;
-  width: 200px;
+  width: 500px;
 }
 
 .commentContent {
@@ -309,5 +312,21 @@ input:focus {
 
   .iFrame {
     display: none;
+  }
+  .takeEmail {
+    width: 100%;
+  }
+  .emailButton {
+    width: 100%;
+  }
+  .commentCard {
+    display: flex;
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 50px;
+    height: 450px;
+  }
+  .stepDownCard {
+    height: 280px;
   }
 }

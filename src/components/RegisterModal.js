@@ -8,7 +8,7 @@ function RegisterModal({ handleShow, show, handleClose, score, initial }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
-          <Modal.Title>Register Here</Modal.Title>
+          <Modal.Title>Let’s Get To Know You!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {initial ? (

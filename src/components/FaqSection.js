@@ -18,6 +18,10 @@ const FaqSection = () => {
     }
   }
 
+  const styleItem = {
+    listStyle: "none",
+  };
+
   return (
     <div className="mt-5">
       <Container className="m-auto">
@@ -31,15 +35,18 @@ const FaqSection = () => {
                   onClick={() => toggleActive("0")}
                   className={activeId === "0" ? "active" : null}
                 >
-                  Reading Expands the Mind
+                  Why do I need mentoring?
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
                     <p className="text-muted">
-                      Reading helps to expand the mind and give us more ideas.
-                      Reading has been proven to keep our minds young, healthy
-                      and sharp, with studies showing that reading can even help
-                      prevent alzheimer’s disease.
+                      Mentoring can have countless benefits, especially when
+                      done in the early growth phase of life. Mentoring
+                      essentially is a two-way process that enables a student to
+                      develop a growth mindset and empowers them to be better
+                      individuals. Mentors play an important role in balancing
+                      your interests and boosting your skills by providing you
+                      with the right encouragement and information.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>
@@ -47,20 +54,25 @@ const FaqSection = () => {
               <Card className="rounded-lg mb-3 border-0">
                 <Accordion.Toggle
                   as={Card.Header}
-                  eventKey="1"
-                  onClick={() => toggleActive("1")}
+                  eventKey="3"
+                  onClick={() => toggleActive("3")}
                   className={activeId === "1" ? "active" : null}
                 >
-                  Reading Helps Improve Concentration
+                  How will a counselor mentor me in the program?
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="1">
+                <Accordion.Collapse eventKey="3">
                   <Card.Body>
                     <p className="text-muted">
-                      Scientists from California, the USA proved that reading
-                      can train our mind how to focus properly, which is
-                      invaluable in nearly everything we do on a daily basis —
-                      whether it be as we study or even in our careers and in
-                      our personal relationships.
+                      A mentor is not just someone who has “been there and done
+                      that”. At Mentoring India, our team of mentors not only
+                      share knowledge, experience, and suggestions but also take
+                      a deeper look at your strengths, values, and skills. Even
+                      though the process is a long one — there’s no shortcut to
+                      success, we have segregated the process into three steps.
+                      The first step is to analyze your core values through a
+                      series of 21 basic questions. Following this, a
+                      personalized 7-day improvement plan acts as the head start
+                      of the long-term development plan.
                     </p>
                   </Card.Body>
                 </Accordion.Collapse>
@@ -72,16 +84,21 @@ const FaqSection = () => {
                   onClick={() => toggleActive("2")}
                   className={activeId === "2" ? "active" : null}
                 >
-                  Reading Can Help You Destress
+                  Why should I choose Mentoring India?
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="2">
                   <Card.Body>
-                    <p className="text-muted">
-                      Recent study found that a mere six minutes of reading was
-                      shown to reduce muscle tension, and slowed down the heart
-                      rates of readers. It reduced stress levels by an
-                      impressive 68%.
-                    </p>
+                    <ul className="text-muted mb-5">
+                      The mentoring program at Mentoring India humbly ticks in
+                      all the following boxes:
+                      <li style={styleItem}>
+                        👉 Curated according to your goals
+                      </li>
+                      <li style={styleItem}>👉 Affordable fee</li>
+                      <li style={styleItem}>👉 Trained professionals</li>
+                      <li style={styleItem}>👉 Unlimited resources</li>
+                      <li style={styleItem}>👉 Guaranteed results</li>
+                    </ul>
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

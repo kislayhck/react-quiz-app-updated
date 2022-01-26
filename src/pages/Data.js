@@ -17,51 +17,52 @@ import big from "../assets/book12.webp";
 
 export const questions = [
   {
-    questionText: "Select your gender",
+    questionText: "Choose your gender",
     answerOptions: [
       // { card: false },
-      { answerText: "Male", isCorrect: true, AnsImoji: "👨" },
-      { answerText: "Female", isCorrect: true, AnsImoji: "👩" },
+      { answerText: "Male", isCorrect: true },
+      { answerText: "Female", isCorrect: true },
+      { answerText: "Other", isCorrect: true },
     ],
   },
   {
-    questionText: "Set up the goal you want to achieve!",
+    questionText: "Choose your mentoring goal",
     answerOptions: [
       // { card: false },
       {
-        answerText: "Better in a short time",
+        answerText: "Short-term success",
         isCorrect: true,
         AnsImoji: "👍",
       },
       {
-        answerText: "Work through your strengths",
+        answerText: "Long-term skill development",
         isCorrect: true,
         AnsImoji: "🕘",
       },
     ],
   },
   {
-    questionText: "What is your age?",
+    questionText: "Choose your age range",
     answerOptions: [
       // { card: false },
       {
-        answerText: " 18-29 years ",
+        answerText: " 10 to 12 years ",
         isCorrect: true,
         AnsImoji: "🌙",
       },
       {
-        answerText: " 30-39 years ",
+        answerText: "13 to 16 years ",
         isCorrect: true,
         AnsImoji: "🌔",
       },
 
       {
-        answerText: " 40-49 years ",
+        answerText: " 17 to 18 years ",
         isCorrect: true,
         AnsImoji: "🌗",
       },
       {
-        answerText: " 50+ years ",
+        answerText: " Above 18 years ",
         isCorrect: true,
         AnsImoji: "🌒",
       },
@@ -69,456 +70,187 @@ export const questions = [
   },
 
   {
-    questionText: "Set your goal on timing",
+    questionText: "How much time are you willing to dedicate to the program?",
     answerOptions: [
       // { card: false },
       {
-        answerText: " Easy ",
+        answerText: " I follow my daily routine religiously ",
         isCorrect: true,
         AnsImoji: "🐤",
       },
       {
-        answerText: " Common ",
+        answerText: " I plan my day according to tasks ",
         isCorrect: true,
         AnsImoji: "🎯",
       },
 
       {
-        answerText: " Serious ",
+        answerText: "I do not plan my day ",
         isCorrect: true,
         AnsImoji: "💪",
       },
-      {
-        answerText: " Intensive ",
-        isCorrect: true,
-        AnsImoji: "🚀",
-      },
     ],
   },
   {
     questionText:
-      "Do you agree with the statement below ? I am strongly convinced that learning and personal growth are important, but it is hard to stay motivated without a clear plan.",
+      "I find it hard to stay motivated because of my lack of plan.",
     answerOptions: [
       // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
   {
-    questionText:
-      "Do you agree with the statement below ? Usually, I don’t have time to read an entire book. It's hard for me to finish long reads.",
+    questionText: "I enjoy reading books. But I find it hard to concentrate..",
     answerOptions: [
       // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
   {
     questionText:
-      "Do you agree with the statement below ? It is difficult for me to keep the focus on the same task for a long time.",
+      "I find it difficult to be focused on one task for a long period of time.",
 
     answerOptions: [
       // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
   {
-    questionText: "Does this book seem interesting to you?",
-    questionCard: true,
-    questionImg: successPeop,
+    questionText: "Which type of book would you be interested in?",
+
     answerOptions: [
       // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: "Fictional", isCorrect: true },
+      { answerText: "Non- Fictional", isCorrect: true },
     ],
   },
   {
-    questionText: "Which of these people inspires you the most?",
+    questionText: "Which of the following personalities inspire you the most?",
     questionCard: false,
     answerOptions: [
-      {
-        answerText: " Jeff Bezos",
-        img: steve,
-        isCorrect: true,
-      },
-      { answerText: " Elon Musk", img: elon, isCorrect: true },
-      {
-        answerText: " Bill Gates",
-        img: richard,
-        isCorrect: true,
-      },
-      { answerText: "Tony Stark", img: robert, isCorrect: true },
+      { answerText: "Falguni Nayar", isCorrect: true },
+
+      { answerText: " Sundar Pichai", isCorrect: true },
+
+      { answerText: "Mithali Raj", isCorrect: true },
+      { answerText: "steve jobs", isCorrect: true },
     ],
   },
   {
-    questionText: "It is difficult for me to make decisions quickly.",
+    questionText: "Decision-making is not my strong suit.",
     answerOptions: [
       // { card: false },
-      {
-        answerText: " Not True",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
-      {
-        answerText: " Partially True",
-        isCorrect: true,
-        AnsImoji: "🙄",
-      },
-      {
-        answerText: " Completely True",
-        isCorrect: true,
-        AnsImoji: "😒",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
+    ],
+  },
+  {
+    questionText: "I really need to work on my time management skills.",
+    answerOptions: [
+      // { card: false },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
   {
     questionText:
-      "I feel like I could have done better by improving my time management.",
+      "I have a fear of repeating my mistakes and this makes me underconfident,",
     answerOptions: [
       // { card: false },
-      {
-        answerText: "Improve it",
-        isCorrect: true,
-        AnsImoji: "😛",
-      },
-      {
-        answerText: "Not sure",
-        isCorrect: true,
-        AnsImoji: "🤔",
-      },
-      {
-        answerText: " It's okay",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
-    ],
-  },
-  {
-    questionText:
-      "I feel unconfident and doubt my skills and abilities because of my past mistakes.",
-    answerOptions: [
-      // { card: false },
-      {
-        answerText: " Not True",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
-      {
-        answerText: " Partially True",
-        isCorrect: true,
-        AnsImoji: "🙄",
-      },
-      {
-        answerText: " Completely True",
-        isCorrect: true,
-        AnsImoji: "😒",
-      },
-    ],
-  },
-  {
-    questionText: "Does this book seem interesting to you?",
-    questionCard: true,
-    questionImg: overnightsuccess,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-  {
-    questionText: "What about this one?",
-    questionCard: true,
-    questionImg: miracle,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-  {
-    questionText: "Would you love to read this book?",
-    questionCard: true,
-    questionImg: club,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
 
   {
     questionText:
-      "Do you often go so deep into your thoughts that you ignore everything and everyone around you?",
+      "I sometimes go into deep thoughts and end up missing out on everything around me.",
     questionCard: false,
     answerOptions: [
       // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
   {
     questionText:
-      "I need to achieve a better mutual understanding in my current and further relationships.",
+      "I have to gain clarity of the current me and my future self.",
     answerOptions: [
       // { card: false },
-      {
-        answerText: " I don't want it",
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-      {
-        answerText: " It sounds pretty relevant",
-        isCorrect: true,
-        AnsImoji: "👌",
-      },
-      {
-        answerText: " It's what I aim for",
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
 
   {
-    questionText: "I tend to lose my boundaries in a relationship.",
+    questionText: "I burst out into anger at times and regret soon after.",
     answerOptions: [
       // { card: false },
-      {
-        answerText: " Disagree",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
-      {
-        answerText: "  agree",
-        isCorrect: true,
-        AnsImoji: "🙄",
-      },
-      {
-        answerText: " Strongly agree",
-        isCorrect: true,
-        AnsImoji: "😒",
-      },
-    ],
-  },
-
-  {
-    questionText: "And what about this one?",
-    questionCard: true,
-    questionImg: selfdiscipline,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "Does this book seem interesting to you?",
-    questionCard: true,
-    questionImg: goodvibes,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "I often feel that I can achieve greater results.",
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "I would love to achieve a stable work-life balance.",
-    answerOptions: [
-      // { card: false },
-      {
-        answerText: "No,I'm okay",
-        isCorrect: true,
-        AnsImoji: "🍀",
-      },
-      {
-        answerText: "Hard to say",
-        isCorrect: true,
-        AnsImoji: "😥",
-      },
-      {
-        answerText: "Yes,It's entirely true",
-        isCorrect: true,
-        AnsImoji: "🤕",
-      },
-    ],
-  },
-
-  {
-    questionText: "I believe I deserve more and I am capable of it.",
-    answerOptions: [
-      // { card: false },
-      {
-        answerText: "Disagree",
-        isCorrect: true,
-        AnsImoji: "😒",
-      },
-      {
-        answerText: " agree",
-        isCorrect: true,
-        AnsImoji: "🙄",
-      },
-      {
-        answerText: "Strongly agree",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
-    ],
-  },
-
-  {
-    questionText: "Does this book seem interesting to you?",
-    questionCard: true,
-    questionImg: powerofnow,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "And what about this one?",
-    questionCard: true,
-    questionImg: nevereat,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "Would you love to learn more about this book?",
-    questionCard: true,
-    questionImg: growrich,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "Happiness is my usual state of mind.",
-    answerOptions: [
-      // { card: false },
-      {
-        answerText: "Disagree",
-        isCorrect: true,
-        AnsImoji: "😒",
-      },
-      {
-        answerText: " agree",
-        isCorrect: true,
-        AnsImoji: "🙄",
-      },
-      {
-        answerText: "Strongly agree",
-        isCorrect: true,
-        AnsImoji: "😃",
-      },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
     ],
   },
 
   {
     questionText:
-      "I’m convinced I will achieve much better results with positive thinking.",
+      "I often have a realization that I can be better at what I do.",
+    answerOptions: [
+      // { card: false },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
+    ],
+  },
+
+  {
+    questionText: "I aim for a scheduled daily routine.",
+    answerOptions: [
+      // { card: false },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
+    ],
+  },
+
+  {
+    questionText: "I can achieve what I put my mind into.",
+    answerOptions: [
+      // { card: false },
+      { answerText: " Agree", isCorrect: true, AnsImoji: "👍" },
+      { answerText: " DisAgree", isCorrect: true, AnsImoji: "👎" },
+    ],
+  },
+
+  {
+    questionText: "My usual state of mind is:.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Happy",
+        isCorrect: true,
+      },
+      {
+        answerText: " Calm",
+        isCorrect: true,
+      },
+      {
+        answerText: "Confused",
+        isCorrect: true,
+      },
+      {
+        answerText: "Irritated",
+        isCorrect: true,
+      },
+      {
+        answerText: "Angry",
+        isCorrect: true,
+      },
+    ],
+  },
+
+  {
+    questionText: "A positive mindset will help me achieve better results..",
     answerOptions: [
       // { card: false },
       {
@@ -531,16 +263,11 @@ export const questions = [
         isCorrect: true,
         AnsImoji: "😼",
       },
-      {
-        answerText: "Strongly agree",
-        isCorrect: true,
-        AnsImoji: "😡",
-      },
     ],
   },
 
   {
-    questionText: "Sometimes, I can't force myself to do anything.",
+    questionText: "I often have a tough time doing simple tasks",
     answerOptions: [
       // { card: false },
       {
@@ -553,61 +280,186 @@ export const questions = [
         isCorrect: true,
         AnsImoji: "😅",
       },
-      {
-        answerText: "Strongly agree",
-        isCorrect: true,
-        AnsImoji: "😖",
-      },
     ],
   },
-
   {
-    questionText: "Does this book seem interesting to you?",
-    questionCard: true,
-    questionImg: masteryourmotivation,
+    questionText:
+      "I need continuous exposure to new experiences and knowledge.",
     answerOptions: [
       // { card: false },
       {
+        answerText: "Disagree",
         isCorrect: true,
-        AnsImoji: "👍",
+        AnsImoji: "💪",
       },
       {
+        answerText: " agree",
         isCorrect: true,
-        AnsImoji: "👎",
-      },
-    ],
-  },
-
-  {
-    questionText: "And what about this one?",
-    questionCard: true,
-    questionImg: richestman,
-    answerOptions: [
-      // { card: false },
-      {
-        isCorrect: true,
-        AnsImoji: "👍",
-      },
-      {
-        isCorrect: true,
-        AnsImoji: "👎",
+        AnsImoji: "😅",
       },
     ],
   },
-
   {
-    questionText: "Would you love to read this book?",
-    questionCard: true,
-    questionImg: big,
+    questionText:
+      "I believe that stories and illustrations are the best way to convey a thought.",
     answerOptions: [
       // { card: false },
       {
+        answerText: "Disagree",
         isCorrect: true,
-        AnsImoji: "👍",
+        AnsImoji: "💪",
       },
       {
+        answerText: " agree",
         isCorrect: true,
-        AnsImoji: "👎",
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "I find it difficult to express my emotions.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText:
+      "I execute tasks better when I have a clear, organized plan and setup.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "I usually focus on getting things done one at a time.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "I enjoy thinking about “what if” scenarios in my mind.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText:
+      "I believe that in order to understand someone I must put myself in their shoes first.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "Multitasking is not my forte.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "Others describe me as a competitive person.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText: "Others describe me as a “walking encyclopedia”.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
+      },
+    ],
+  },
+  {
+    questionText:
+      "Others trust me when they put me in charge of an activity or a task.",
+    answerOptions: [
+      // { card: false },
+      {
+        answerText: "Disagree",
+        isCorrect: true,
+        AnsImoji: "💪",
+      },
+      {
+        answerText: " agree",
+        isCorrect: true,
+        AnsImoji: "😅",
       },
     ],
   },

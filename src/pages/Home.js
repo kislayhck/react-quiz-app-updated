@@ -1,14 +1,23 @@
 import { useState } from "react";
 import mentor from "../assets/mentoringIndia.png";
-import rodemap from "../assets/rodemap.png";
+import rodemap from "../assets/roadPng.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import RegisterModal from "../components/RegisterModal";
+import Impact from "../components/Impact";
 
 const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const ImgStyle = {
+    width: "85%",
+    display: "flex",
+    margin: "auto",
+    marginTop: "10px",
+    background: "antiquewhite",
+  };
 
   return (
     <div className="container-fluid">
@@ -38,8 +47,28 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <h1 className="text-center mt-5">How we works</h1>
-      <img src={rodemap} alt="mentor" className="w-100" /> */}
+      <div className="whyMentor">
+        <h1>Why Mentoring India?</h1>
+        <p style={{ width: "86%", marginTop: "30px" }}>
+          Does growth inspire you? Does the confidence to ace in your field keep
+          you going? With Mentoring India, you’re investing in yourself and the
+          skills that you want to bring to life. From basic communication to
+          exploring career options, Mentoring India has your back!
+        </p>
+        <p>
+          Our dedicated and enthusiastic community strives towards a common
+          goal: bringing out the best in you!
+        </p>
+      </div>
+      <h1 className="text-center">How we works</h1>
+      <img
+        src={rodemap}
+        alt="mentor"
+        className="img-fluid mt-5"
+        style={ImgStyle}
+      />
+      <h1 className="text-center mt-5">Our Impact</h1>
+      <Impact className="mt-5" />
       <RegisterModal
         show={show}
         handleClose={handleClose}

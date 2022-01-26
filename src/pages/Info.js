@@ -31,29 +31,20 @@ const Info = () => {
 
   useEffect(() => {
     const secondsTimer = setInterval(() => {
-      setText("who was once in your place?");
+      setText("The one who was once where you are today");
     }, 2000);
     const thirdTimer = setInterval(() => {
-      setText("who can listen your fears?");
+      setText("The one who lets you believe in your dreams");
     }, 3000);
     const fourthTimer = setInterval(() => {
-      setText("who can believe your dreams?");
+      setText("The one who holds you accountable for your actions");
     }, 6000);
     const fifthTimer = setInterval(() => {
-      setText("who can manage your conflicts?");
+      setText("The one who can guide you with constructive feedback");
     }, 12000);
-    const sixthTimer = setInterval(() => {
-      setText("who can make belief in yourself?");
-    }, 24000);
 
     return () =>
-      clearInterval(
-        secondsTimer,
-        thirdTimer,
-        fourthTimer,
-        fifthTimer,
-        sixthTimer
-      );
+      clearInterval(secondsTimer, thirdTimer, fourthTimer, fifthTimer);
   }, []);
 
   return (
@@ -70,7 +61,10 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-center mt-5">Steps to be followed</h1>
+      <h1 className="text-center mt-5">
+        The journey of a growth-driven mindset for your career begins with 4
+        small steps
+      </h1>
       <div className="container borderSteps" style={{ marginTop: "100px" }}>
         <div className="row">
           <div className="col-md-6">
@@ -78,9 +72,9 @@ const Info = () => {
           </div>
           <div className="col-md-6">
             <h2 className="mt-5 steps">Step 1.</h2>
-            <h3 className="mt-5">
-              You know better version of yourself, write yourself, predict
-              yourself.
+            <h3 className="mt-3">
+              You are the main character of your story. Don’t let anyone else
+              hold the pen for you.
             </h3>
             <Link
               to="/questions"
@@ -104,18 +98,22 @@ const Info = () => {
         <div className="row">
           <div className="col-md-6" style={{ marginTop: "50px" }}>
             <h2 className="steps">Step 2.</h2>
-            <h3 className="mt-5">Improvement Plan for next 7 days.</h3>
+            <h3 className="mt-3">7 Day Strategic Improvement Plan</h3>
             <div>
-              <span className="p-2">▶️</span>Better habit, better growth
+              <span className="p-2">▶️</span>Better planning, better actions,
+              better results
             </div>
             <div>
-              <span className="p-2">▶️</span>Inner skill
+              <span className="p-2">▶️</span>Upskilling yourself to upgrade
+              yourself
             </div>
             <div>
-              <span className="p-2">▶️</span>Lets analyse values*
+              <span className="p-2">▶️</span>Identifying problem areas and
+              corrective actions and values
             </div>
             <div>
-              <span className="p-2">▶️</span>Know your strength.
+              <span className="p-2">▶️</span>Analyzing your strengths and
+              improving every day
             </div>
             <Link
               to="/questions"
@@ -145,7 +143,9 @@ const Info = () => {
           </div>
           <div className="col-md-5 offset-md-1">
             <h2 className="mt-5 steps">Step 3.</h2>
-            <h3 className="mt-5">Find Mentor</h3>
+            <h3 className="mt-3">
+              Find your mentor — your friend, philosopher, and guide
+            </h3>
             <div className="step3_mentor">
               <h5>{text}</h5>
             </div>
@@ -174,19 +174,20 @@ const Info = () => {
         <div className="row">
           <div className="col-md-6" style={{ marginTop: "10px" }}>
             <h2 className="mt-5 steps">Step 4.</h2>
-            <h3 className="mt-5">Development Plan </h3>
+            <h3 className="mt-3">Persoanlized Development Plan</h3>
             <div>
-              <span className="p-2">▶️</span>Habit Building
+              <span className="p-2">▶️</span>Harnessing better habits
             </div>
             <div>
-              <span className="p-2">▶️</span>Skill development
+              <span className="p-2">▶️</span>Improve your core skills
             </div>
             <div>
-              <span className="p-2">▶️</span>Importance of understanding values.
+              <span className="p-2">▶️</span>Adapt to values that drive your
+              actions and mindset.
             </div>
             <div>
-              <span className="p-2">▶️</span>Lightning of strength in right
-              direction.
+              <span className="p-2">▶️</span>Establish milestones and let your
+              strengths guide you in the right direction.
             </div>
             <Link
               to="/info"

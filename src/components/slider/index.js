@@ -18,49 +18,56 @@ function Slider() {
           stepByStep
           number="📆"
           title="Day 1"
-          details="Follow your daily plan and complete the indicated tasks"
+          subTitle="Mind"
+          details="Including Emotions, Learning, Reading, Focus, Vision and all kind of mental Skills"
         />
 
         <ImprovementCard
           stepByStep
-          number="⏲️"
+          number="📆"
           title="Day 2"
-          details="Just 15 minutes per day will be enough for an impressive result"
+          subTitle="Body"
+          details="Including Energy, Health, Sport, Exercise, Fitness, Wellness, Beauty, Outlook"
         />
 
         <ImprovementCard
           stepByStep
-          number="🚀"
+          number="📆"
           title="Day 3"
-          details="Just 15 minutes per day will be enough for an impressive result"
+          subTitle="Spirit"
+          details="Including Raising Consciousness, Being present, Meditation, in Contact with our Soul"
         />
 
         <ImprovementCard
           stepByStep
           number="📆"
           title="Day 4"
-          details="Follow your daily plan and complete the indicated tasks"
+          subTitle="Social"
+          details="Including Family, Spouse or Boy/Girl-Friend, Friends and all other Relationships with other people"
         />
 
         <ImprovementCard
           stepByStep
           number="📆"
           title="Day 5"
-          details="Follow your daily plan and complete the indicated tasks"
+          subTitle="Finance"
+          details="Including Money, Savings, Belongings and Things we own"
         />
 
         <ImprovementCard
           stepByStep
           number="📆"
           title="Day 6"
-          details="Follow your daily plan and complete the indicated tasks"
+          subTitle="Juice"
+          details="Means all things Fun like Traveling, Celebrating etc."
         />
 
         <ImprovementCard
           stepByStep
           number="📆"
           title="Day 7"
-          details="Follow your daily plan and complete the indicated tasks"
+          subTitle="Profession"
+          details="Is what I create in my Work as a meaningful Contribution to society and to my personal Fulfillment"
         />
       </Carousel>
     </>

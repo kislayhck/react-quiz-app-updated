@@ -56,10 +56,9 @@ function Question({ questions }) {
   useMemo(() => {
     if (loader) {
       let arr = [
-        "✔️ Analyzing your goals",
-        "✔️ Selecting relevent books",
-        "✔️ Implementing your values",
-        "✔️ Providing Great Mentorship Progra",
+        "✔️ Analyzing your answers",
+        "✔️ Evaluating core strengths",
+        "✔️ Customizing your improvement plan",
       ];
       let i = 0;
       let newArr = [];
