@@ -1,32 +1,119 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import Comment from "../components/Comment";
 import FaqSection from "../components/FaqSection";
 import Confetti from "react-confetti";
 import Com1 from "../assets/1c.jpeg";
 import Com2 from "../assets/2c.jpeg";
+import axios from "axios";
+import { DataContext } from "../context";
 
 import "./style.css";
 
 const Payment = () => {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
+  const [transid, setTransid] = useState();
+  const [amount, setAmount] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const [userData, setPosts] = useContext(DataContext);
+
   const confettiRef = useRef(null);
+
+  console.log(userData.contact, "connnn");
+
+  const loadScript = (src) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+
+      script.src = src;
+
+      script.onload = () => {
+        resolve(true);
+      };
+
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
+  const displayRazorpay = async () => {
+    setLoading(true);
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+    setLoading(false);
+    if (!res) {
+      alert("RazorPay access failed!");
+
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        `https://mentoringindia.herokuapp.com/razorpay/razorpay`,
+        {
+          method: "POST",
+
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      const result = await res.json();
+
+      const options = {
+        key: "rzp_live_qm4p3XhLdgK4ZI",
+        amount: result.amount,
+        currency: result.currency,
+        name: "Courses",
+        description: "Test Transaction...",
+        image: "https://example.com/your_logo",
+        order_id: result.id,
+
+        handler: function (response) {
+          setTransid(response.razorpay_payment_id);
+          setAmount(response.razorpay_amount);
+          alert(response.razorpay_order_id);
+
+          const { data } = axios.post(
+            "https://mentoringindia.herokuapp.com/paid/add-student",
+            {
+              name: userData.name,
+              email: userData.email,
+              phn: userData.phn,
+              city: userData.city,
+              state: userData.state,
+              classes: userData.classes,
+              transid: response.razorpay_payment_id,
+              amount: result.amount,
+            }
+          );
+          console.log(data, "razdata");
+        },
+        prefill: {
+          name: userData.name,
+          email: userData.email,
+          contact: userData.phn,
+        },
+      };
+
+      var paymentObject = new window.Razorpay(options);
+      paymentObject.on("payment.failed", function (response) {
+        alert(response.error.description);
+      });
+      paymentObject.open();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     setHeight(confettiRef?.current?.clientHeight);
     setWidth(confettiRef?.current?.clientWidth);
-  }, []);
-
-  useEffect(() => {
-    const Script = document.createElement("script");
-    const Form = document.getElementById("pay");
-    Script.setAttribute(
-      "src",
-      "https://checkout.razorpay.com/v1/payment-button.js"
-    );
-    Script.setAttribute("data-payment_button_id", "pl_IRWXaKDDZul3Gi");
-    Form.appendChild(Script);
   }, []);
 
   return (
@@ -68,7 +155,18 @@ const Payment = () => {
                   <p>Rs.99 for one month</p>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">
-                  <form id="pay"> </form>
+                  {/* <form id="pay"> </form> */}
+
+                  {loading ? (
+                    <p>Loading...</p>
+                  ) : (
+                    <button
+                      className="btn btn-primary"
+                      onClick={displayRazorpay}
+                    >
+                      Buy Now!
+                    </button>
+                  )}
                 </div>
               </Card.Body>
             </Card>

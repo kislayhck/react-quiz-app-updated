@@ -1,37 +1,45 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import { DataContext } from "../context";
 
 import "./style.css";
 
 function GetMyPlann() {
   const [cookies] = useCookies(["allData"]);
-  const [phone_number, setPhoneNumber] = useState();
+  const [phn, setPhoneNumber] = useState();
   const [email, setEmail] = useState("");
   const [error, setError] = useState();
 
   const [loader, setLoader] = useState(false);
+
+  const [userData, setPosts] = useContext(DataContext);
 
   const name = cookies.allData.firstName;
   const city = cookies.allData.city;
   const state = cookies.allData.state;
   const classes = cookies.allData.classStd;
 
-  const myPhoneNumber = Number(phone_number);
+  const myPhoneNumber = Number(phn);
 
   const history = useHistory();
 
   const handleSubmit = async (e) => {
+    setPosts({
+      name: "kislay",
+      roll: 1,
+    });
     const validateCheck = await validate();
     if (validateCheck) {
       e.preventDefault();
 
       setLoader(true);
-      const newData = { name, email, phone_number, city, state, classes };
+      const newData = { name, email, phn, city, state, classes };
+      setPosts(newData);
       var config = {
         method: "post",
-        url: "https://mentringindia.herokuapp.com/admin/registration-api/registration",
+        url: "https://mentoringindia.herokuapp.com/student/add-student",
         headers: {
           "Content-Type": "application/json",
         },
@@ -40,7 +48,7 @@ function GetMyPlann() {
 
       axios(config)
         .then(function (response) {
-          if (response.status === 200) {
+          if (response.status === 201) {
             setError("");
             setPhoneNumber("");
             setEmail("");
@@ -75,6 +83,7 @@ function GetMyPlann() {
       return true;
     }
   };
+  console.log(userData, "userData-------------");
 
   return (
     <>
