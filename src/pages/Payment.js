@@ -69,9 +69,9 @@ const Payment = () => {
         key: "rzp_live_qm4p3XhLdgK4ZI",
         amount: result.amount,
         currency: result.currency,
-        name: "Courses",
-        description: "Test Transaction...",
-        image: "https://example.com/your_logo",
+        name: "Mentornship Program",
+        description: "7 days mentornship poogram",
+        // image: "SVG/logo512.png",
         order_id: result.id,
 
         handler: function (response) {
