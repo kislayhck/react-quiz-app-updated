@@ -14,8 +14,6 @@ function FormField({ onHide, score: correctAnswers }) {
   const email = cookies.emailValue;
   const history = useHistory();
 
-  console.log(loader);
-
   const handleSubmit = (e) => {
     setLoader(true);
     e.preventDefault();

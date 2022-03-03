@@ -83,7 +83,6 @@ function GetMyPlann() {
       return true;
     }
   };
-  console.log(userData, "userData-------------");
 
   return (
     <>

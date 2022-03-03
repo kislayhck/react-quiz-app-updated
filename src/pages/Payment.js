@@ -21,7 +21,9 @@ const Payment = () => {
 
   const confettiRef = useRef(null);
 
-  console.log(userData.contact, "connnn");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const loadScript = (src) => {
     return new Promise((resolve) => {
@@ -92,7 +94,6 @@ const Payment = () => {
               amount: result.amount,
             }
           );
-          console.log(data, "razdata");
         },
         prefill: {
           name: userData.name,
@@ -122,7 +123,7 @@ const Payment = () => {
         <Confetti numberOfPieces={30} width={1200} height={900} />
       </div>
       <div className="paymentHeader text-center container-fluid">
-        <h1>New Year, New Life</h1>
+        <h1>One Life, One Chance</h1>
         <h5>Try a wiser approach to daily self-improvement right now!</h5>
       </div>
       <div className="container-fluid bestOffer">
@@ -138,8 +139,8 @@ const Payment = () => {
                   <div className="paymentCardHeader">1-Month Plan</div>
                 </div>
                 <div>
-                  <h2>One Month Plan</h2>
-                  <p>Rs.99 for one month</p>
+                  <h2>72 hour plan</h2>
+                  <p>Rs.46 for 3 days</p>
                 </div>
               </Card.Body>
             </Card>
@@ -148,11 +149,11 @@ const Payment = () => {
             <Card className="d-flex justify-content-center align-items-center paymentCard">
               <Card.Body>
                 <div className="d-flex justify-content-center align-items-center">
-                  <div className="paymentCardHeader">7 Day Plan</div>
+                  <div className="paymentCardHeader">7 Days Plan</div>
                 </div>
                 <div>
-                  <h2>One Month Plan</h2>
-                  <p>Rs.99 for one month</p>
+                  <h2>168 hour plan</h2>
+                  <p>Rs.99 for 7 days</p>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">
                   {/* <form id="pay"> </form> */}
@@ -178,8 +179,8 @@ const Payment = () => {
                   <div className="paymentCardHeader">6-Month Plan</div>
                 </div>
                 <div>
-                  <h2>One Month Plan</h2>
-                  <p>Rs.99 for one month</p>
+                  <h2>504 hour plan</h2>
+                  <p>Rs.297 for 21 days</p>
                 </div>
               </Card.Body>
             </Card>

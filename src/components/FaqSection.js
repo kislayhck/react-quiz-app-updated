@@ -70,7 +70,7 @@ const FaqSection = () => {
                       though the process is a long one — there’s no shortcut to
                       success, we have segregated the process into three steps.
                       The first step is to analyze your core values through a
-                      series of 21 basic questions. Following this, a
+                      series of 32 basic questions. Following this, a
                       personalized 7-day improvement plan acts as the head start
                       of the long-term development plan.
                     </p>

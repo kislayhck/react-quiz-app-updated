@@ -1,6 +1,6 @@
 import { useState } from "react";
 import mentor from "../assets/mentoringIndia.png";
-import rodemap from "../assets/roadPng.png";
+import rodemap from "../assets/roadMap.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import RegisterModal from "../components/RegisterModal";

@@ -19,8 +19,6 @@ const Info = () => {
   const [cookies] = useCookies(["allData"]);
   const history = useHistory();
 
-  console.log(cookies, "cook----");
-
   const handleClick = () => {
     history.push("/questions");
   };
