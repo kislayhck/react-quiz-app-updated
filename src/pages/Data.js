@@ -1,20 +1,3 @@
-import steve from "../assets/steve.jpg";
-import elon from "../assets/elon.jpeg";
-import richard from "../assets/richard.jpg";
-import robert from "../assets/robert.jpeg";
-import successPeop from "../assets/book4.webp";
-import overnightsuccess from "../assets/book2.webp";
-import miracle from "../assets/book2 (1).webp";
-import club from "../assets/book3.webp";
-import goodvibes from "../assets/book6.webp";
-import selfdiscipline from "../assets/book5.webp";
-import powerofnow from "../assets/book7.webp";
-import nevereat from "../assets/book8.webp";
-import growrich from "../assets/book9.webp";
-import masteryourmotivation from "../assets/book10.webp";
-import richestman from "../assets/book11.webp";
-import big from "../assets/book12.webp";
-
 export const questions = [
   {
     questionText: "Choose your gender",

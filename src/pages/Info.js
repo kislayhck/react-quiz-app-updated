@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import { useCookies } from "react-cookie";
-import mentoringImg from "../assets/leftInfo.jpg";
-import serviceImg from "../assets/service.png";
 
 import MainImg from "../assets/5.png";
 import Img1 from "../assets/3.png";
@@ -9,25 +6,24 @@ import Img2 from "../assets/1.png";
 import Img3 from "../assets/4.png";
 import Img4 from "../assets/2.png";
 
+import { useLocation } from 'react-router-dom'
+
 import { Button } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Instructions from "../components/Instructions";
 
 const Info = () => {
   const [text, setText] = useState("");
+  const location = useLocation();
 
-  const [cookies] = useCookies(["allData"]);
-  const history = useHistory();
-
-  const handleClick = () => {
-    history.push("/questions");
-  };
 
   const borderSteps = {
     border: "1px solid",
     padding: "30px",
     marginTop: "100px",
   };
+
+
 
   useEffect(() => {
     const secondsTimer = setInterval(() => {
@@ -47,14 +43,16 @@ const Info = () => {
       clearInterval(secondsTimer, thirdTimer, fourthTimer, fifthTimer);
   }, []);
 
+
+
   return (
     <div className="container-fluid">
       <div className="">
         <div className="row">
           <div className="col-md-6 infoMain">
             <h3>Hi,</h3>
-            <h1>{cookies.allData.firstName}</h1>
-            <h1>{cookies.allData.lastName}</h1>
+            <h1>{location.state.firstName}</h1>
+            <h1>{location.state.lastName}</h1>
           </div>
           <div className="col-md-6" style={{ marginTop: "-70px" }}>
             <img src={MainImg} alt="mentor" className="img-fluid" />
@@ -76,7 +74,10 @@ const Info = () => {
               hold the pen for you.
             </h3>
             <Link
-              to="/questions"
+              to={{
+                pathname: "/questions",
+                state: location.state
+              }}
               className="d-flex justify-content-center decoration-none"
               style={{ textDecoration: "none" }}
             >
@@ -115,7 +116,10 @@ const Info = () => {
               improving every day
             </div>
             <Link
-              to="/questions"
+              to={{
+                pathname: "/questions",
+                state: location.state
+              }}
               className="d-flex justify-content-center decoration-none"
               style={{ textDecoration: "none" }}
             >
@@ -149,7 +153,10 @@ const Info = () => {
               <h5>{text}</h5>
             </div>
             <Link
-              to="/questions"
+              to={{
+                pathname: "/questions",
+                state: location.state
+              }}
               className="d-flex justify-content-center decoration-none"
               style={{ textDecoration: "none" }}
             >

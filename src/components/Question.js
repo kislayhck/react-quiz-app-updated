@@ -11,7 +11,7 @@ export const iframe = () => {
   };
 };
 
-function Question({ questions }) {
+function Question({ questions, allData }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -22,6 +22,9 @@ function Question({ questions }) {
   const [check, setCheck] = useState([]);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+
 
   useMemo(() => {
     if (bar) {
@@ -102,7 +105,7 @@ function Question({ questions }) {
             //     Register
             //   </button>
             // </div>
-            <GetMyPlann />
+            <GetMyPlann allData={allData} />
           ) : (
             <>
               <div className="row questionRightBar">

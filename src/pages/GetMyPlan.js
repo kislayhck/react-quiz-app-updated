@@ -3,14 +3,13 @@ import { Col, Container, Row } from "react-bootstrap";
 import FaqSection from "../components/FaqSection";
 import ImprovementCard from "../components/ImprovementCard";
 import Timer from "../components/Timer";
-import DayPlan from "../assets/DaysTile.png";
-import Percent from "../assets/percent.png";
 
 import { useHistory } from "react-router-dom";
-import CaraouselBox from "../components/caraousels";
+
+
 import Slider from "../components/slider";
 import Comment from "../components/Comment";
-import Skills from "../components/Skills";
+
 
 import Com1 from "../assets/1c.jpeg";
 import Com2 from "../assets/2c.jpeg";

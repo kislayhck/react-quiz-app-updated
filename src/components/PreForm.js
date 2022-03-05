@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { useCookies } from "react-cookie";
 import { useHistory } from "react-router-dom";
 
 import Cities from "./cities.json";
@@ -9,7 +8,6 @@ import states from "./indianstates.json";
 function PreForm() {
   const [firstName, setFirstname] = useState();
   const [lastName, setLastname] = useState();
-  const [cookies, setCookie] = useCookies(["user"]);
   const history = useHistory();
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
@@ -17,9 +15,11 @@ function PreForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/info");
     const data = { firstName, lastName, city, state, classStd };
-    setCookie("allData", data);
+    history.push({
+      pathname: '/info',
+      state: data
+    });
   };
   const filteredCity = Cities.filter((item) => item.state === state);
 

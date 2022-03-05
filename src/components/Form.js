@@ -14,6 +14,10 @@ function FormField({ onHide, score: correctAnswers }) {
   const email = cookies.emailValue;
   const history = useHistory();
 
+
+
+
+
   const handleSubmit = (e) => {
     setLoader(true);
     e.preventDefault();
@@ -42,6 +46,7 @@ function FormField({ onHide, score: correctAnswers }) {
     setPhoneNumber("");
     setSchool("");
   };
+
 
   return (
     <div>
